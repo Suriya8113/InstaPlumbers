@@ -1,0 +1,177 @@
+.expand-section {
+  width: 100%;
+  background: #eef5ff;
+  padding: 50px 0px;
+  display: flex;
+  justify-content: center;
+}
+
+.expand-container {
+  gap: 60px;
+  display: flex;
+}
+
+.expand-map img {
+  width: 480px;
+  height: max-content;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.expand-content h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #0a1a33;
+  margin-bottom: 10px;
+}
+
+.expand-content p {
+  font-size: 15px;
+  width: 380px;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.expand-list details {
+  margin-bottom: 20px;
+  overflow: hidden;               
+  max-height: 50px; 
+  transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+.expand-list details[open] {
+  max-height: 500px;                 
+  padding-top: 10px;                
+  padding-bottom: 10px;
+}
+
+.expand-list summary {
+  font-size: 17px;
+  font-weight: 700;
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  padding-right: 20px; 
+}
+
+.expand-list summary::after {
+  content: ">";
+  font-size: 16px;
+  margin-right: -15px;
+  transition: transform 0.4s ease;
+  transform: rotate(90deg);
+}
+
+.expand-list details[open] summary::after {
+  transform: rotate(270deg);
+}
+
+
+.checkbox-grid {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 12px 25px;
+  margin-top: 15px;
+}
+
+.checkbox-grid input[type="checkbox"] {
+  accent-color: #0a8cff;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.checkbox-grid label {
+  font-size: 14px;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+
+/* RESPONSIVE */
+
+
+@media (min-width: 1920px) {
+  .expand-section {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+
+  .expand-container {
+    gap: 80px;
+  }
+
+  .expand-map img {
+    width: 600px;
+    height: auto;
+  }
+
+  .expand-content h2 {
+    font-size: 40px;
+  }
+
+  .expand-content p {
+    font-size: 16px;
+    width: 450px;
+  }
+
+  .checkbox-grid {
+    grid-template-columns: repeat(4, auto);
+    gap: 15px 30px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .expand-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .expand-map img {
+    width: 85%;
+    height: auto;
+    margin-left: 8%;
+  }
+
+  .expand-content{
+    padding: 30px;
+  }
+
+  .expand-content h2 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  .expand-content p {
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .expand-list summary::after {
+    right: 0; /* adjust arrow on mobile */
+  }
+
+  .checkbox-grid {
+    grid-template-columns: repeat(2, auto);
+    gap: 10px 15px;
+    justify-content: center;
+  }
+
+  .checkbox-grid label {
+    font-size: 16px;
+    gap: 15px;
+    padding: 5px 15px;
+  }
+}

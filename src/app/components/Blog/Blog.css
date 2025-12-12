@@ -1,0 +1,142 @@
+.blog-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 0px;
+}
+
+.blog-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.blog-badge {
+  background: #e8f0fc;
+  padding: 6px 14px;
+  display: inline-block;
+  font-size: 12px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  color: #113a67;
+  font-weight: 600;
+}
+
+.blog-title {
+  font-size: 34px;
+  font-weight: 700;
+  color: #0b2541;
+}
+
+.view-btn {
+  margin-left: auto;
+  border: 2px solid #0b2541;
+  padding: 8px 20px;
+  border-radius: 40px;
+  background: transparent;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.blog-list {
+  display: flex;
+  gap: 70px;
+  margin-top: 40px;
+}
+
+.blog-card {
+  background: #fff;
+  border-radius: 18px;
+  width: 40%;
+  padding-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #eee;
+}
+
+.blog-img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 18px 18px 0 0;
+}
+
+.blog-date {
+  position: absolute;
+  top: 210px;
+  left: 10px;
+  background: rgba(0, 140, 240, 1);
+  padding: 5px 12px;
+  font-size: 11px;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 6px;
+}
+
+.blog-card-title {
+  margin: 20px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #0b2541;
+}
+
+.blog-meta {
+  margin: 0 20px;
+  font-size: 12px;
+  color: #6d7b8a;
+  font-weight: 600;
+}
+
+
+  /* RESPONSIVE */
+
+@media (max-width: 480px) {
+  .blog-container {
+    padding: 40px 0px;
+  
+  }
+
+  .blog-header {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .blog-badge{
+    display: none;
+  }
+
+  .blog-title {
+  
+    font-size: 20px;
+  }
+
+  .view-btn {
+    display: none;
+  }
+
+  .blog-list {
+    flex-direction: column;
+    gap: 30px;
+     align-items: center;
+    margin-top: 30px;
+  }
+
+  .blog-card {
+    width: 85%;
+   
+  }
+
+  .blog-img {
+    height: 200px;
+  }
+
+  .blog-date {
+    top: 175px;
+  }
+
+  .blog-card-title {
+    font-size: 16px;
+  }
+}

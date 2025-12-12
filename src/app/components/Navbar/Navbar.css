@@ -1,0 +1,176 @@
+.navbar {
+  width: 100%;
+  height: 137px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  z-index: 100;
+  max-width: 1920px;
+  position: relative;
+
+}
+
+.nav-container {
+  display: flex;
+  position: absolute;
+  width: 1365px;
+  margin-top: 41px;
+  height: 59px;
+  align-items: center;
+  justify-content: space-evenly;
+
+}
+
+
+.nav-links {
+  display: flex;
+  gap: 60px;
+  list-style: none;
+  height: 27px;
+  width: 622px;
+}
+
+
+.nav-links li a {
+  text-decoration: none;
+  color: rgba(90, 104, 114, 1);
+  font-weight: 400;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: rgba(0, 140, 240, 1);
+}
+
+.cta-btn {
+  padding: 10px 20px;
+  border: 2px solid rgba(0, 140, 240, 1);
+  color: #4b84ff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 20px;
+  transition: all 0.3s;
+}
+
+
+.cta-btn:hover {
+  background-color: rgba(0, 140, 240, 1);
+  color: #fff;
+}
+
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 250px;
+  height: 100vh;
+  background: #fff;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+  padding: 100px 20px;
+  transition: right 0.3s ease;
+  z-index: 2000;
+}
+
+.side-menu.open {
+  right: 0;
+}
+
+.side-menu ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 65px;
+}
+
+.side-menu a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #575757;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1500;
+}
+
+
+
+
+/* Responsive Navbar */
+
+
+@media (min-width: 1920px) {
+  .nav-container {
+    width: 1365px;
+    margin: 41px auto 0 auto;
+    padding: 0px 250px;
+    justify-content: space-evenly;
+  }
+
+  .nav-links {
+    gap: 60px;
+    width: 650px;
+  }
+
+  .cta-btn {
+    font-size: 20px;
+    padding: 10px 20px;
+  }
+
+  .navbar {
+    height: 137px;
+  }
+}
+
+@media (max-width: 480px) {
+
+
+  .navbar {
+
+    height: 100px;
+    position: fixed;
+    top: 0;
+    z-index: 3000;
+
+  }
+
+  .nav-container {
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+    margin-top: 0px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    justify-content: space-evenly;
+    gap: 7rem;
+
+
+  }
+
+
+  .nav-links,
+  .cta {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+
+
+  }
+
+
+}
