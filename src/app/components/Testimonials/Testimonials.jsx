@@ -91,7 +91,7 @@ const Testimonials = () => {
                 <h4>Arnold Wilson</h4>
                 <span>CLIENT, USA</span>
               </div>
-              <img src="/Assets/client 2.png" className="ts-avatar" />
+              <img src="/Assets/Client 2.png" className="ts-avatar" />
             </div>
           </div>
         </SwiperSlide>
